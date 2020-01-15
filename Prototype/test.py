@@ -20,7 +20,7 @@ def faceSwap(label):
     frame = cv2.imread(label)
     frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     mask = np.zeros_like(frame_gray)
-    painting = cv2.imread('painting2.jpg')
+    painting = cv2.imread('painting.jpg')
     painting_gray = cv2.cvtColor(painting, cv2.COLOR_BGR2GRAY)
 
 
@@ -195,7 +195,8 @@ def faceDetection(i):
     cv2.imshow('Video', frame)
 
 while True:
-    faceDetection(i)
+    faceSwap("test7.jpg")
+    #faceDetection(i)
     i = i+1
     # Display the resulting frame
     if cv2.waitKey(1) & 0xFF == ord('q'):
